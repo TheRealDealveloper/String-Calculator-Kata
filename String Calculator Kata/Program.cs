@@ -11,8 +11,8 @@ namespace String_Calculator_Kata
 
         public static int Add(string numbers)
         {
-
-            throw new NotImplementedException();
+            if (numbers == "") return 0;
+            else throw new NotImplementedException();
         }
     }
 }
