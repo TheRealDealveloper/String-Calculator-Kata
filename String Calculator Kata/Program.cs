@@ -6,7 +6,27 @@ namespace String_Calculator_Kata
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            string numbers = "1, \n3";
+            int sum = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                string num = numbers[i].ToString();
+                if (int.TryParse(num, out int numtemp))
+                {
+                    sum = sum + numtemp;
+                }
+                else
+                {
+                    string numfuture = numbers[i+1].ToString();
+                    if (int.TryParse(numfuture, out int numfuturetemp))
+                    {
+                        continue;
+                    }
+                    throw new Exception("Input is NOT ok!");
+                }
+                
+            }
+            Console.WriteLine(sum);
         }
 
         public static int Add(string numbers)
