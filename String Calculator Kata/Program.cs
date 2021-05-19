@@ -2,11 +2,17 @@
 
 namespace String_Calculator_Kata
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+        }
+
+        public static int Add(string numbers)
+        {
+
+            throw new NotImplementedException;
         }
     }
 }
