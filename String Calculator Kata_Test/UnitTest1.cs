@@ -25,9 +25,14 @@ namespace String_Calculator_Kata_Test
         public void Add_A_Two_Number_As_String_Returning_Sum(string number)
         {
             string[] subs = number.Split(new Char[] { ',', '\n' });
+
             int sum = 0;
             for (int i = 0; i < subs.Length; i++)
             {
+                if (String.IsNullOrWhiteSpace(subs[i]))
+                {
+                    throw new Exception("Input is NOT ok!");
+                }
                 int.TryParse(subs[i], out int num);
                 sum = sum + num;
             }
