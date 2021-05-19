@@ -13,11 +13,17 @@ namespace String_Calculator_Kata_Test
             Assert.AreEqual(Program.Add(number), 0);
         }
         [DataTestMethod]
-        [DataRow("1")]
+        [DataRow("19")]
         public void Add_A_Single_Number_As_String_Returning_Number(string number)
         {
             int.TryParse(number, out int num);
             Assert.AreEqual(Program.Add(number), num);
+        }
+        [DataTestMethod]
+        [DataRow("19,1")]
+        public void Add_A_Two_Number_As_String_Returning_Sum(string number)
+        {
+            Assert.AreEqual(Program.Add(number), 20);
         }
     }
 }
