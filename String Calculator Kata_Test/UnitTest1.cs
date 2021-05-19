@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using String_Calculator_Kata;
+using System;
 
 namespace String_Calculator_Kata_Test
 {
@@ -20,10 +21,10 @@ namespace String_Calculator_Kata_Test
             Assert.AreEqual(Program.Add(number), num);
         }
         [DataTestMethod]
-        [DataRow("19,1,10,10")]
+        [DataRow("19,1\n10,10")]
         public void Add_A_Two_Number_As_String_Returning_Sum(string number)
         {
-            string[] subs = number.Split(',');
+            string[] subs = number.Split(new Char[] { ',', '\n' });
             int sum = 0;
             for (int i = 0; i < subs.Length; i++)
             {
