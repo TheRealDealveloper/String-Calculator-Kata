@@ -6,7 +6,7 @@ namespace String_Calculator_Kata
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World");
         }
 
         public static int Add(string numbers)
@@ -17,8 +17,8 @@ namespace String_Calculator_Kata
             }
             else
             {
-                
-                string[] subs = numbers.Split(',');
+
+                string[] subs = numbers.Split(new Char[] { ',', '\n' });
                 int sum = 0;
                 for (int i = 0; i < subs.Length; i++)
                 {
