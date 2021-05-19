@@ -8,9 +8,9 @@ namespace String_Calculator_Kata_Test
     {
         [DataTestMethod]
         [DataRow("")]
-        public void Add_Up_Two_Numbers_Returning_()
+        public void Add_Up_Two_Numbers_Returning_(string number)
         {
-            Assert.AreEqual(Program.Add(""), 0);
+            Assert.AreEqual(Program.Add(number), 0);
         }
     }
 }

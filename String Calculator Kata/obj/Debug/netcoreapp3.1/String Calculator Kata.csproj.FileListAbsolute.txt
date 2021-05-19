@@ -1,0 +1,13 @@
+C:\Users\James\source\repos\String Calculator Kata\String Calculator Kata\bin\Debug\netcoreapp3.1\String Calculator Kata.exe
+C:\Users\James\source\repos\String Calculator Kata\String Calculator Kata\bin\Debug\netcoreapp3.1\String Calculator Kata.deps.json
+C:\Users\James\source\repos\String Calculator Kata\String Calculator Kata\bin\Debug\netcoreapp3.1\String Calculator Kata.runtimeconfig.json
+C:\Users\James\source\repos\String Calculator Kata\String Calculator Kata\bin\Debug\netcoreapp3.1\String Calculator Kata.runtimeconfig.dev.json
+C:\Users\James\source\repos\String Calculator Kata\String Calculator Kata\bin\Debug\netcoreapp3.1\String Calculator Kata.dll
+C:\Users\James\source\repos\String Calculator Kata\String Calculator Kata\bin\Debug\netcoreapp3.1\String Calculator Kata.pdb
+C:\Users\James\source\repos\String Calculator Kata\String Calculator Kata\obj\Debug\netcoreapp3.1\String Calculator Kata.csprojAssemblyReference.cache
+C:\Users\James\source\repos\String Calculator Kata\String Calculator Kata\obj\Debug\netcoreapp3.1\String Calculator Kata.AssemblyInfoInputs.cache
+C:\Users\James\source\repos\String Calculator Kata\String Calculator Kata\obj\Debug\netcoreapp3.1\String Calculator Kata.AssemblyInfo.cs
+C:\Users\James\source\repos\String Calculator Kata\String Calculator Kata\obj\Debug\netcoreapp3.1\String Calculator Kata.csproj.CoreCompileInputs.cache
+C:\Users\James\source\repos\String Calculator Kata\String Calculator Kata\obj\Debug\netcoreapp3.1\String Calculator Kata.dll
+C:\Users\James\source\repos\String Calculator Kata\String Calculator Kata\obj\Debug\netcoreapp3.1\String Calculator Kata.pdb
+C:\Users\James\source\repos\String Calculator Kata\String Calculator Kata\obj\Debug\netcoreapp3.1\String Calculator Kata.genruntimeconfig.cache

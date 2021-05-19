@@ -11,8 +11,14 @@ namespace String_Calculator_Kata
 
         public static int Add(string numbers)
         {
-            if (numbers == "") return 0;
-            else throw new NotImplementedException();
+            if (String.IsNullOrWhiteSpace(numbers))
+            {
+                return 0;
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
