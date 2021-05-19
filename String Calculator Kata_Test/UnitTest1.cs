@@ -20,7 +20,7 @@ namespace String_Calculator_Kata_Test
             Assert.AreEqual(Program.Add(number), num);
         }
         [DataTestMethod]
-        [DataRow("19,1")]
+        [DataRow("19,1,10,10")]
         public void Add_A_Two_Number_As_String_Returning_Sum(string number)
         {
             string[] subs = number.Split(',');
