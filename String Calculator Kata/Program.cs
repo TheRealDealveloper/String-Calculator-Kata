@@ -17,7 +17,15 @@ namespace String_Calculator_Kata
             }
             else
             {
-                throw new NotImplementedException();
+                
+                string[] subs = numbers.Split(',');
+                int sum = 0;
+                for (int i = 0; i < subs.Length; i++)
+                {
+                    int.TryParse(subs[i], out int num);
+                    sum = sum + num;
+                }
+                return sum;
             }
         }
     }
