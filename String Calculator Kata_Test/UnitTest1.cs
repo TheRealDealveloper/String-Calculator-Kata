@@ -83,7 +83,6 @@ namespace String_Calculator_Kata_Test
             }
             else
             {
-
                 string[] subs = numbers.Split(new Char[] { ',', '\n' });
                 if (subs[0].Contains("//"))
                 {

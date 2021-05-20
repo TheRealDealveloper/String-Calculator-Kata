@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace String_Calculator_Kata
@@ -7,7 +8,7 @@ namespace String_Calculator_Kata
     {
         public static void Main(string[] args)
         {
-            string numbers = "//[***]\n1***2***3***11";
+            string numbers = "//[*][%]\n1*2%3";
             int sum = 0;
             string delimiter;
             string error = "";
@@ -16,23 +17,20 @@ namespace String_Calculator_Kata
             }
             else
             {
-
                 string[] subs = numbers.Split(new Char[] { ',', '\n' });
                 if (subs[0].Contains("//"))
                 {
                     if (subs[0][2] == '[')
                     {
-                        var substemp = subs[0].Split(new Char[] { '/', '[', ']' }, StringSplitOptions.RemoveEmptyEntries);
-                        delimiter = substemp[0];
-                        subs = subs[1].Split(delimiter);
+                        string[] del = subs[0].Split(new Char[] { '/', '[', ']' }, StringSplitOptions.RemoveEmptyEntries);
+                        var s = subs[1].Split(del, StringSplitOptions.None);
+                        subs = s;
                     }
                     else
                     {
                         delimiter = subs[0][2].ToString();
-                        Console.WriteLine("Delimiter... " + delimiter);
                         subs = numbers.Split(delimiter);
                     }
-                    
                 }
                 for (int i = 0; i < subs.Length; i++)
                 {
@@ -49,9 +47,7 @@ namespace String_Calculator_Kata
                     {
                         sum = sum + num;
                     }
-
                 }
-
             }
             if (error != "")
             {
@@ -70,23 +66,20 @@ namespace String_Calculator_Kata
             }
             else
             {
-
                 string[] subs = numbers.Split(new Char[] { ',', '\n' });
                 if (subs[0].Contains("//"))
                 {
                     if (subs[0][2] == '[')
                     {
-                        var substemp = subs[0].Split(new Char[] { '/', '[', ']' }, StringSplitOptions.RemoveEmptyEntries);
-                        delimiter = substemp[0];
-                        subs = subs[1].Split(delimiter);
+                        string[] del = subs[0].Split(new Char[] { '/', '[', ']' }, StringSplitOptions.RemoveEmptyEntries);
+                        var s = subs[1].Split(del, StringSplitOptions.None);
+                        subs = s;
                     }
                     else
                     {
                         delimiter = subs[0][2].ToString();
-                        Console.WriteLine("Delimiter... " + delimiter);
                         subs = numbers.Split(delimiter);
                     }
-
                 }
                 for (int i = 0; i < subs.Length; i++)
                 {
@@ -103,9 +96,7 @@ namespace String_Calculator_Kata
                     {
                         sum = sum + num;
                     }
-
                 }
-
             }
             if (error != "")
             {
