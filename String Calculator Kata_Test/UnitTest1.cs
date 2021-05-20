@@ -38,5 +38,24 @@ namespace String_Calculator_Kata_Test
             }
             Assert.AreEqual(Program.Add(number), sum);
         }
+
+        [DataTestMethod]
+        [DataRow("//;\n1;2")]
+        public void Add_A_Two_Number_As_String_Returning_Sum_With_Custom_Delimiter(string number)
+        {
+            string[] subs = number.Split(new Char[] { ',', '\n' });
+
+            int sum = 0;
+            for (int i = 0; i < subs.Length; i++)
+            {
+                if (String.IsNullOrWhiteSpace(subs[i]))
+                {
+                    throw new Exception("Input is NOT ok!");
+                }
+                int.TryParse(subs[i], out int num);
+                sum = sum + num;
+            }
+            Assert.AreEqual(Program.Add(number), sum);
+        }
     }
 }

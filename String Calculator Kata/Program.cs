@@ -6,7 +6,34 @@ namespace String_Calculator_Kata
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            string numbers = "//;\n1;2";
+            int sum = 0;
+            char delimiter;
+            if (String.IsNullOrWhiteSpace(numbers))
+            {
+                
+            }
+            else
+            {
+
+                string[] subs = numbers.Split(new Char[] { ',', '\n' });
+                if (subs[0].Contains("//"))
+                {
+                    delimiter = subs[0][2];
+                    Console.WriteLine("Delimiter "+delimiter);
+                }
+                
+                for (int i = 0; i < subs.Length; i++)
+                {
+                    if (String.IsNullOrWhiteSpace(subs[i]))
+                    {
+                        throw new Exception("Input is NOT ok!");
+                    }
+                    int.TryParse(subs[i], out int num);
+                    sum = sum + num;
+                }
+            }
+            Console.WriteLine(sum);
         }
 
         public static int Add(string numbers)
