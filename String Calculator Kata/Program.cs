@@ -16,10 +16,7 @@ namespace String_Calculator_Kata
             int sum = 0;
             string delimiter;
             string error = "";
-            if (String.IsNullOrWhiteSpace(numbers))
-            {
-            }
-            else
+            if (!String.IsNullOrWhiteSpace(numbers))
             {
                 string[] subs = numbers.Split(new Char[] { ',', '\n' });
                 if (subs[0].Contains("//"))
