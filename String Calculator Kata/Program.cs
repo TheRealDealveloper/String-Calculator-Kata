@@ -74,9 +74,9 @@ namespace String_Calculator_Kata
                     }
                     sum = sum + num;
                 }
-                
+
             }
-            if (error!="")
+            if (error != "")
             {
                 throw new Exception("negatives not allowed: " + error);
             }
