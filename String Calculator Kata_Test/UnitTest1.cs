@@ -71,7 +71,8 @@ namespace String_Calculator_Kata_Test
             Assert.AreEqual(Program.Add(numbers), sum);
         }
         [DataTestMethod]
-        [DataRow("1,2,3,4,5,2,2,100")]
+        [DataRow("1,2,3,4,-5,2,-2,-100")]
+        [ExpectedException(typeof(Exception))]
         public void Add_A_Numbers_As_String_Returning_Sum_Checking_For_Negative_Numbers(string numbers)
         {
             int sum = 0;
