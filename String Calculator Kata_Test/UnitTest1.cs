@@ -111,5 +111,12 @@ namespace String_Calculator_Kata_Test
             }
             Assert.AreEqual(Program.Add(numbers), sum);
         }
+
+        [DataTestMethod]
+        [DataRow("2,1001")]
+        public void Add_Two_Numbers_As_String_Returning_Sum_Ignoring_Num_Greater_Than_1000(string numbers)
+        {
+            Assert.AreEqual(Program.Add(numbers), 2);
+        }
     }
 }
