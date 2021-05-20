@@ -63,7 +63,7 @@ namespace String_Calculator_Kata
         public static int Add(string numbers)
         {
             int sum = 0;
-            char delimiter;
+            string delimiter;
             string error = "";
             if (String.IsNullOrWhiteSpace(numbers))
             {
@@ -74,8 +74,19 @@ namespace String_Calculator_Kata
                 string[] subs = numbers.Split(new Char[] { ',', '\n' });
                 if (subs[0].Contains("//"))
                 {
-                    delimiter = subs[0][2];
-                    subs = numbers.Split(delimiter);
+                    if (subs[0][2] == '[')
+                    {
+                        var substemp = subs[0].Split(new Char[] { '/', '[', ']' }, StringSplitOptions.RemoveEmptyEntries);
+                        delimiter = substemp[0];
+                        subs = subs[1].Split(delimiter);
+                    }
+                    else
+                    {
+                        delimiter = subs[0][2].ToString();
+                        Console.WriteLine("Delimiter... " + delimiter);
+                        subs = numbers.Split(delimiter);
+                    }
+
                 }
                 for (int i = 0; i < subs.Length; i++)
                 {
@@ -92,7 +103,7 @@ namespace String_Calculator_Kata
                     {
                         sum = sum + num;
                     }
-                    
+
                 }
 
             }
