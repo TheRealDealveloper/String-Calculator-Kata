@@ -8,7 +8,7 @@ namespace String_Calculator_Kata
     {
         public static void Main(string[] args)
         {
-            string numbers = "//[*][%]\n1*2%3";
+            string numbers = "//[***][%]\n1***2%3";
             int sum = 0;
             string delimiter;
             string error = "";
