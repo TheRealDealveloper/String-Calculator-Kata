@@ -6,7 +6,7 @@ namespace String_Calculator_Kata
     {
         public static void Main(string[] args)
         {
-            string numbers = "//;\n1;2";
+            string numbers = "//;\n1;2;3;5";
             int sum = 0;
             char delimiter;
             if (String.IsNullOrWhiteSpace(numbers))
@@ -21,8 +21,8 @@ namespace String_Calculator_Kata
                 {
                     delimiter = subs[0][2];
                     Console.WriteLine("Delimiter "+delimiter);
+                    subs = numbers.Split(delimiter);
                 }
-                
                 for (int i = 0; i < subs.Length; i++)
                 {
                     if (String.IsNullOrWhiteSpace(subs[i]))
@@ -32,6 +32,7 @@ namespace String_Calculator_Kata
                     int.TryParse(subs[i], out int num);
                     sum = sum + num;
                 }
+
             }
             Console.WriteLine(sum);
         }
