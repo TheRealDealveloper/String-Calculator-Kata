@@ -118,5 +118,11 @@ namespace String_Calculator_Kata_Test
         {
             Assert.AreEqual(Program.Add(numbers), 2);
         }
+        [DataTestMethod]
+        [DataRow("//[***]\n1***2***3")]
+        public void Add_Numbers_As_String_Returning_Sum_With_Custom_Delimiter_Length(string numbers)
+        {
+            Assert.AreEqual(Program.Add(numbers), 6);
+        }
     }
 }
